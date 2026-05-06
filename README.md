@@ -39,4 +39,4 @@ A Kotlin-based Android application designed to improve urban living by enabling 
 ## 🚀 Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/SmartCityCitizen.git
+   git clone https://github.com/pranav045/SewaTrack.git
