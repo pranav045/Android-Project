@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Project"
+rootProject.name = "SewaTrack"
 include(":app")
  
