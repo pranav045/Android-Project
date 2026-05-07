@@ -1,5 +1,6 @@
 package com.example.project
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -13,6 +14,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
@@ -35,6 +37,7 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true, widthDp = 500, heightDp = 500)
 @Composable
 fun Login() {
+    val context= LocalContext.current
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
@@ -76,7 +79,8 @@ fun Login() {
         Spacer(Modifier.height(22.dp))
 
         Button(onClick = {
-
+            val intent= Intent(context, Dashboard::class.java)
+            context.startActivity(intent)
         }) {
             Text("Login")
         }
