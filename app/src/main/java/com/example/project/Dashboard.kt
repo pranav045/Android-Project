@@ -29,7 +29,7 @@ class Dashboard : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
             setContent {
-
+                dashboardScreen()
             }
     }
 }
