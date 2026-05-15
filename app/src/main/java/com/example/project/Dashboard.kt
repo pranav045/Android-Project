@@ -1,5 +1,6 @@
 package com.example.project
 
+import android.content.Intent
 import android.graphics.drawable.Icon
 import android.os.Bundle
 import android.widget.Toast
@@ -43,7 +44,10 @@ fun dashboardScreen(){
         topBar={
             TopAppBar(
                 navigationIcon={
-                    IconButton(onClick = {Toast.makeText(context,"Back clicked",Toast.LENGTH_SHORT).show()
+                    IconButton(onClick = {
+                        val intent= Intent(context,Home::class.java)
+                        context.startActivity(intent)
+                        Toast.makeText(context,"Home clicked",Toast.LENGTH_SHORT).show()
                     }) {Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         "back",
